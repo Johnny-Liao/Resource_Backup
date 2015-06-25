@@ -1,2 +1,2 @@
-# Resource_Backup
-Backup some common resources.
+## Objective
+Backup some common resources and some personal notes.
