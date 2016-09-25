@@ -30,11 +30,12 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a different version somewhere else.
 "Plugin 'ascenator/L9', {'name': 'newL9'}
 
-" YouCompleteMe
 Plugin 'gmarik/vundle'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/ListToggle'
 Plugin 'scrooloose/syntastic'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -58,8 +59,8 @@ filetype plugin indent on
 
 " Custom configuration
 set nu
-syntax on
 set paste
+syntax on
 
 " change comment color
 hi Comment ctermfg =blue
@@ -102,11 +103,11 @@ set statusline=%<%f\%h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\"
 
 
 
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'   " 配置默认的ycm_extra_conf.py
-" 按\jd 会跳转到定义
+" configure default ycm_extra_conf.py
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'  
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>   
-let g:ycm_confirm_extra_conf=0   " 打开vim时不再询问是否加载ycm_extra_conf.py配置
-let g:ycm_collect_identifiers_from_tag_files = 1 "使用ctags生成的tags文件
+let g:ycm_confirm_extra_conf=0   " no longer asks if you want to load the ycm_extra_conf.py configuration
+let g:ycm_collect_identifiers_from_tag_files = 1 " Using ctags generated tags file
 
 if has("autocmd")
     " When editing a file, always jump to the last cursor position
@@ -115,3 +116,11 @@ if has("autocmd")
                 \ exe "normal g'\"" |
                 \ endif
 endif
+
+" set the ariline
+let g:airline_powerline_fonts = 1
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+set nocompatible
+set t_Co=256
+" set noshowmode
