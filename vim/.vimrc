@@ -118,9 +118,15 @@ if has("autocmd")
 endif
 
 " set the ariline
+set guifont=Liberation\ Mono\ for\ Powerline\ 10 
 let g:airline_powerline_fonts = 1
-let g:Powerline_symbols = 'fancy'
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
 set laststatus=2
 set nocompatible
 set t_Co=256
 " set noshowmode
+
+" change comment color
+hi Comment ctermfg =blue
