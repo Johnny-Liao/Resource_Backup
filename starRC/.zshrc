@@ -84,15 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cat='ccat --bg=dark'
+alias ccat='ccat --bg=dark'
 alias install='sudo apt-get install'
 # repeat until seccess
-repeat() 
-{
-    while :; 
-    do 
-        $@ && return; 
-        sleep 1;  
-    done
-}
-
+# repeat() { while :; do $@ && return; sleep 1;  done }
