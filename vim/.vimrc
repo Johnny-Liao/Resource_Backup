@@ -54,8 +54,8 @@ filetype plugin indent on    " required
 
 
 
-execute pathogen#infect()
-filetype plugin indent on
+"execute pathogen#infect()
+"filetype plugin indent on
 
 " Custom configuration
 set nu
@@ -119,7 +119,7 @@ endif
 
 " set the ariline
 set guifont=Liberation\ Mono\ for\ Powerline\ 10 
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
@@ -130,3 +130,9 @@ set t_Co=256
 
 " change comment color
 hi Comment ctermfg =blue
+
+" set encoding
+set encoding=utf-8
+set langmenu=zh_CN.UTF-8
+language message zh_CN.UTF-8
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
