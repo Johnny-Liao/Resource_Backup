@@ -36,6 +36,7 @@ Plugin 'Valloric/ListToggle'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -54,8 +55,8 @@ filetype plugin indent on    " required
 
 
 
-"execute pathogen#infect()
-"filetype plugin indent on
+execute pathogen#infect()
+filetype plugin indent on
 
 " Custom configuration
 set nu
@@ -136,3 +137,15 @@ set encoding=utf-8
 set langmenu=zh_CN.UTF-8
 language message zh_CN.UTF-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set paste
+
+
+" set NERDTree
+map <leader>t :NERDTreeToggle<CR>
+let NERDTreeShowLineNumbers=1
+let NERDTreeAutoCenter=1
+let NERDTreeWinSize=35
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.pyc','\~$','\.swp']
+let NERDTreeShowBookmarks=1
+autocmd VimEnter * NERDTree
